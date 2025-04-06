@@ -1,15 +1,82 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>InstaSnatch</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InstaSnatch - Instagram Downloader</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      color: #ff2f68;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      color: #cccccc;
+    }
+
+    form {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input[type="text"] {
+      padding: 15px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 1rem;
+      background: #ff2f68;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #e02057;
+    }
+
+    .footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to InstaSnatch</h1>
-  <p>Paste the Instagram story/reel/post URL below:</p>
-  <form>
-    <input type="text" placeholder="Paste URL here" />
+  <h1>InstaSnatch</h1>
+  <p>Download Instagram Stories, Reels & Posts Instantly</p>
+
+  <form action="/download" method="POST">
+    <input type="text" name="url" placeholder="Paste Instagram Link Here" required />
     <button type="submit">Download</button>
   </form>
+
+  <div class="footer">
+    &copy; 2025 InstaSnatch. Built with love.
+  </div>
 </body>
 </html>
